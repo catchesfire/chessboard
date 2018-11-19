@@ -25,9 +25,8 @@ public class ZtpDekorator {
         JToolBar jToolBar = new JToolBar();
         chessboard.undo = new JButton(new ImageIcon("undo.png"));
         chessboard.redo = new JButton(new ImageIcon("redo.png"));
-//        chessboard.undo.addActionListener(new Chessboard.UndoButton(chessboard));
-        chessboard.undo.addActionListener(new Chessboard.UndoButton(chessboard));
-        chessboard.redo.addActionListener(new Chessboard.RedoButton(chessboard));
+        chessboard.undo.addActionListener(chessboard.new UndoButton());
+        chessboard.redo.addActionListener(chessboard.new RedoButton());
         chessboard.undo.setEnabled(false);
         chessboard.redo.setEnabled(false);
         jToolBar.add(chessboard.undo);
